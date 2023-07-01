@@ -3,14 +3,18 @@ body{
     margin: 0;
     padding: 0;
     color: white;
-    flex-wrap: wrap;
+    overflow-x: hidden;
+    position: relative;
+    /* flex-wrap: wrap; */
+    
 }
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 .home{
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .nav-bar{
@@ -24,6 +28,12 @@ html{
     align-items: center;
     cursor: auto;
     top: 0%;
+}
+.close{
+    display: none;
+}
+.nav-button{
+    display: none;
 }
 .logo{
     margin: 0px 0px;
@@ -56,6 +66,9 @@ html{
     /* margin-right: -75px; */
     width:40%;
 }
+.menu-bar2{
+    display: none;
+}
 .menu-bar a{
     color: grey;
 }
@@ -74,7 +87,7 @@ li{
     text-decoration: none;
 }
 .menu-bar :hover{
-    color: rgb(244, 8, 8);
+    color: rgb(123, 216, 250);
     font-size: 1.02rem;
     
 }
@@ -101,7 +114,7 @@ li{
     display: block;
     
 }
-.name{
+.name{ 
     
     font-size: 80px;
     font-weight: bolder;
@@ -131,13 +144,14 @@ li{
     justify-content: center;
     align-items: center;
     margin-left: 0;
+    margin: 0;
 
     
 }
 
 .icon {
     color: white;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
     margin-right: 50%;
     display: flex;
     /* flex-wrap: wrap; */
@@ -170,17 +184,17 @@ li{
     
     border: 1.5px solid rgb(255, 255, 255);
     border-radius: 10px;
-    /* margin-top: -30px; */
+    /* margin-top: -200px; */
 }
 .About-Me{
     /* background-color: #F1D4E5; */
-    background-color: #FCE9F1;
+    background-color: #FFF4E0;
     
     justify-content: center;
     margin:5%;
-    border-radius: 50px;
+    border-radius: 30px;
     height: 100%;
-    padding: 55px 80px ;
+    padding: 9% 3% ;
     padding-bottom: 100px;
     text-align: center;
     /* font-size: 17px;  media quary */
@@ -222,12 +236,12 @@ li{
 }
 
 .skills{
-    background-color: #FCE9F1;
+    background-color: #FFF4E0;
     
     justify-content: center;
     margin: 5%;
     padding:  0 2%;
-    border-radius: 50px;
+    border-radius: 30px;
     height:100%;
     /* font-size: 17px;  media quary */
     font-size: 22px;
@@ -273,20 +287,20 @@ li{
     background-color: #FFF4E0;
     justify-content: center;
     margin:5%;
-    border-radius: 50px;
+    border-radius: 30px;
     height:100%;
     /* font-size: 17px;  media quary */
     font-size: 22px;
     font-family: 'Gill Sans', 'Gilool Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
+    display: flex;
     flex-wrap: wrap;
     /* position: relative; */
     /* min-width: 100vh; */
-    flex-direction: column;
     align-items: center;
 }
 .contact h2{
-    margin-top: 80px;
+    /* margin-top: 80px; */
 }
 
 .contact-container{
@@ -303,8 +317,8 @@ li{
     width: 37%;
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center;
     /* background-color: rgba(10, 10, 10, 0.768); */
     border-radius: 10px;
     margin-bottom: 20px;
@@ -334,29 +348,36 @@ li{
 }
 h3{
     /* display: block; */
-    font-weight: 500;
+    font-weight: bold;
     color: #00bcd4;
 }
 p{
     margin-top: -15px;
     color: black;
+    font-weight: bold;
     /* display: inline-block; */
     /* flex-wrap: wrap; */
    
 }
 
 .contact-container .contact-form{
-    width: 45%;
-    padding: 40px;
+    width: 50%;
+    /* padding: 10px; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     background-color: rgba(10, 10, 10, 0.768);
     border-radius: 10px;
     margin-bottom: 20px;
     /* color: black; */
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     
+}
+form{
+    width: 80%;
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align : center;
 }
 
 .contact-form .input-box{
@@ -421,7 +442,8 @@ p{
     padding: 10px;
     font-size: 18px;
     border-radius: 30px;
-    margin-left: 32%;
+    /* margin-left: 32%; */
+    text-align: center;
     
 }
 
@@ -451,7 +473,9 @@ footer{
     text-align: center;
     color: blue;
     height: 50vh;
-    margin: 5%;
+    /* margin: 5%; */
+    /* margin-bottom: 2px; */
+    padding-bottom: 0;
 }
 .quote p{
     color: white;
@@ -472,11 +496,12 @@ footer{
     display: flex;
     justify-content: space-around;
     width: 60%;
+    font-size: 1rem;
 }
 
 .icon2 a:hover{
     color: rgb(123, 216, 250);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     transition: width .5s;
 }
 .copyright{
@@ -487,6 +512,49 @@ footer{
 
 
 @media screen and (max-width: 940px){
+
+    html{
+        text-align: center;
+    }
+
+    
+    .menu-bar2 {
+        color: rgb(143, 142, 142);
+        display: flex;
+        
+        justify-content: space-around;
+        /* margin-right: -75px; */
+        width:40%;
+    }
+    .menu-bar{
+        display: none;
+    }
+    .menu-bar2 a{
+        color: grey;
+        font-size: 1.2rem;
+    }
+    
+    
+    a{
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .menu-bar2 :hover{
+        color: rgb(123, 216, 250);
+        font-size: 1.5rem;
+        text-shadow: 0 0 20px rgb(123, 216, 250);
+        
+    }
+
+    .name{
+    
+        font-size: 50px;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        margin: 5px 0;
+    }
 
     .main{
         display: flex;
@@ -500,6 +568,10 @@ footer{
         /* margin-bottom: 20% ; */
         height: 100%;
     }
+
+    .between-home-aboutme{
+        margin-top: -200px;
+    }
     .greet{
         /* display: flex; */
         /* flex-wrap: wrap; */
@@ -511,16 +583,28 @@ footer{
 
     .my-photo{
         display: block;
-        margin: 8%;
-        margin-bottom: 40%;
+        /* margin: 8%; */
+        margin: 20% 0;
         border-radius: 50%;
         height: 250px;
-        border:  4px solid rgb(123, 216, 250) ;
-        
+        border:  4px solid rgb(123, 216, 250) ; 
     
-        
     }
 
+    .aboutme-text{
+        text-align: center;
+        background-color: rgba(10, 10, 10, 0.768);
+        color: white;
+        border-radius: 20px;
+        font-size: 20px;
+        /* justify-content: center; */
+        /* padding:  1%; */
+        height: 100%;
+        width: 100%;
+        display: flex;
+        /* align-items: center; */
+        
+    }
 
     .I{
         
@@ -553,14 +637,24 @@ footer{
         width: 90%;
     }
 
+
+
+
+    
     .contact-container{
-        flex-wrap: wrap;
         flex-direction: column;
+        padding: 0;
+        width: 100%;
+        text-align: center;
     }
 
     .contact-container .contact-info{
-        width: 40%;
-        display: inline-block;
+        width: 100%;
+        /* display: inline-block; */
+    }
+
+    .contact-container .contact-form{
+        width: 80%;
     }
 
 }
